@@ -51,7 +51,7 @@ body {
 .container {
     max-width: 340px;
     background-color: var(--Very-dark-blue-card);
-    padding: 1rem;
+    padding: 1.25rem;
     border-radius: 0.75rem;
     display: flex;
     flex-direction: column;
@@ -89,6 +89,8 @@ p {
     color: var(--Soft-blue);
 }
 
+
+
 .profile-container {
     display: flex;
     align-items: center;
@@ -108,6 +110,38 @@ p {
 .image:hover,h1:hover, .profile-container p span:hover {
     color: var(--Cyan);
     cursor: pointer;
+}
+.image {
+    position: relative;
+}
+
+.mainImg {
+    width: 100%;
+    height: 100%;
+}
+
+.view {
+    position: absolute;
+    background-color: hsl(178, 100%, 50%, 60%);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.view:hover {
+    opacity: 1;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.image-view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media (max-width:375px) {
